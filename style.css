@@ -2,12 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
 }
 
 .container {
   position: relative;
   height: 100vh;
-  width: 35vw;
+  width: 30vw;
+  flex-shrink: 0;
+  flex-grow: 1;
 }
 
 .background {
@@ -48,13 +55,99 @@
   color: white;
 }
 
-a {
+.container a {
   color: white;
 }
 
-p {
+.container p {
   font-size: 5rem;
   color: white;
   margin: auto 0;
   font-family: my-font, sans-serif;
+}
+
+.form-section {
+  flex-grow: 2;
+  line-height: 1.5;
+  height: 100vh;
+}
+
+.title {
+  margin-left: 40px;
+}
+
+.heading {
+  margin-left: 40px;
+  margin-top: 50px;
+  margin-bottom: 8px;
+}
+
+.form-row {
+  display: flex;
+  margin: 20px 40px;
+  gap: 50px;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin-left: 40px;
+  background-color: #596d48;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.form-section p {
+  margin-top: 20px;
+  margin-left: 40px;
+  font-size: 12px;
+}
+
+.form-section label {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.form-section a {
+  text-decoration: none;
+  color: #596d48;
+}
+
+input:focus {
+  border: 1px solid blue;
+  outline: none;
+  box-shadow: 1px 1px 1px blue;
+}
+
+input[type="password"]:invalid {
+  border: 1px solid red;
+}
+
+input[type="password"]:valid {
+  border: 1px solid green;
+}
+
+input {
+  border-radius: 4px;
+  width: 200px;
+  height: 20px;
+  border: 1px solid gray;
+}
+
+.form-section {
+  background-color: lightcyan;
+}
+
+.input-section {
+  background-color: rgb(255, 255, 255);
+  padding-top: 8px;
+  padding-bottom: 10px;
+  border-radius: 10px;
 }
